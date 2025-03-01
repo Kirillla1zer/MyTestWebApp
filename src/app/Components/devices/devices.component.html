@@ -1,0 +1,12 @@
+
+<div style="text-align:center"> 
+<button  (click)=getDevicesWithUniq_Id()>Вывести все устройства </button>
+<h2 *ngIf="isButtonClicked">Если нажать на id выведется информация в контексте этого устройства</h2>
+<ul *ngFor="let device of devicesWithUniq">
+    <div class=device-card > 
+        <p> <a routerLink="{{device._id}}">ID: {{device._id}}</a></p>
+        <p>Name Of owner:</p>
+        <p>{{device.name}}</p>
+    </div>
+  </ul>
+</div>

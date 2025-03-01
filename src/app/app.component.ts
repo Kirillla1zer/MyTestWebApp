@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
+import { DevicesListServiceService } from './data/devices-list-service.service';
+import { Device } from './model/device.model'; 
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  providers: [],
+  styleUrls: ['./app.component.less'],
+  templateUrl: `./app.component.html`
+  
+  
+
 })
-export class AppComponent {
+export class AppComponent   {
   title = 'testangular';
+  
+  
+  
 }
+

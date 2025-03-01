@@ -1,0 +1,14 @@
+ <button><a routerLink="/Devices"> главная страница</a></button>
+    <p> Для ID:{{this.deviceID}} есть {{devices.length}} записи об устройстве</p>
+    <br> 
+<ul *ngFor="let device of devices;index as i"> 
+<div class="device-card">
+    <button class="ForSomeButton" (click)="deleteDataOfDeviceSession(device)" >Удалить данную записы</button>
+    <h1>Запись номер: {{i+1}} </h1>
+    <p>id:{{device._id}}</p>
+    <p>name:{{device.name}}</p>
+    <p>startTime:{{device.startTime}} </p>
+    <p>endTime:{{device.endTime}}</p>
+    <p>verison:{{device.version}}</p>
+</div> 
+</ul>
